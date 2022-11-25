@@ -1,0 +1,10 @@
+<p>split-button works!</p>
+
+<button [sbbContextmenuTriggerFor]="menu" aria-label="Show actions" type="button">Menu</button>
+<sbb-menu #menu="sbbMenu">
+  <button sbb-menu-item type="button">Copy</button>
+  <button sbb-menu-item type="button">Delete</button>
+  <hr />
+  <button sbb-menu-item type="button">Cancel</button>
+</sbb-menu>
+hello

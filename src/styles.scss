@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@sbb-esta/angular' as sbb;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
