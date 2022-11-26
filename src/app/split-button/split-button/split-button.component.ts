@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EnvironmentInjector } from '@angular/core';
 
 @Component({
   selector: 'app-split-button',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./split-button.component.scss']
 })
 export class SplitButtonComponent {
+
+
+  public onPrimaryAction(event: Event) {
+    event.stopPropagation();
+    console.log('>>>>> on Primary Action', event);
+  }
 
 }

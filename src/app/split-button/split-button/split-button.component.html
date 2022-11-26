@@ -1,10 +1,12 @@
-<p>split-button works!</p>
-
-<button [sbbContextmenuTriggerFor]="menu" aria-label="Show actions" type="button">Menu</button>
-<sbb-menu #menu="sbbMenu">
+<div [sbbMenuTriggerFor]="menu" aria-label="Show actions" type="button" sbb class="flex-left">
+  <ng-template sbbMenuDynamicTrigger>
+    <button (click)="onPrimaryAction($event)">Primary</button>
+    <span>open</span>
+  </ng-template>
+</div>
+<sbb-menu #menu="sbbMenu" [class]="'split-button-panel'" [hasBackdrop]="true">
   <button sbb-menu-item type="button">Copy</button>
   <button sbb-menu-item type="button">Delete</button>
   <hr />
   <button sbb-menu-item type="button">Cancel</button>
 </sbb-menu>
-hello
